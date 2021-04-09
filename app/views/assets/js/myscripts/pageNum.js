@@ -4,23 +4,24 @@ var morePages = [];
 
 function loadPages() {
     var pageCon = document.getElementById("loadPageArea");
-    for (var i = 0; i < morePages.length; i++) {
+    for (var i = 0; i<morePages.length; i++) {
         var elePage = document.createElement("div");
-        elePage.attributes("class", "item");
+        elePage.setAttribute("class", "item");
         elePage.innerHTML = `
-			    							<a href="page.php?id=${morePages[i]['id']}">
-			    								<div class="video_thumbnail">
-			    									<img class="img-fluid" src="${morePages[i]['url']}">
-			    								</div>
-			    								<div class="video_description">
-			    									<h4> ${morePages[i]["topic"]} <span>${morePages[i]['created']}</span> </h4>
-			    									<h2 >${morePages[i]["tille"]}</h2>
-			    									<p>${morePages[i]["label"]}</p>
-			    								</div>
-			    							</a>
-    `;
+            <a href="page.php?id=${morePages[i]['id']}">
+                <div class="video_thumbnail">
+                    <img class="img-fluid" src="${morePages[i]['url']}">
+                </div>
+                <div class="video_description">
+                    <h4> ${morePages[i]["topic"]} <span>${morePages[i]['created']}</span> </h4>
+                    <h2 >${morePages[i]["title"]}</h2>
+                    <p>${morePages[i]["label"]}</p>
+                </div>
+            </a>
+            `;
         pageCon.appendChild(elePage)
     }
+    timeID = null;
 }
 
 function loadMore() {

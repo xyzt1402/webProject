@@ -46,7 +46,7 @@
 						</div>
 						<!-- /.Item -->
 						<!-- Item -->
-	    				<div class="thumbnail-1 v2">
+	    				<div class="thumbnail-1 v3">
 							<a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $pages[2]['id'];?>">
 								<img src="<?php echo $pages[2]['url']?>">
 								<div class="overlay">

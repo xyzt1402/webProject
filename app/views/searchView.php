@@ -6,10 +6,62 @@
     		<!-- <div class="ts-space70"></div> -->
     		<div class="row">
     			<div class="col-12 col-lg-8">
+				<div class="contact-form">
+
+					<div class="row">							
+							<form action="<?php echo BASE_URL;?>/search.php" method="POST" enctype="multipart/form-data">
+								<div class="row" style="margin-left: 15px;">
+									<div class="form-group col-sm-12 col-md-12 col-lg-12">
+										<label style="margin-bottom: 10px; font-family: 'Lora-Medium'; font-size: 30px">Tìm kiếm</label>
+										<input type="text" value="<?php echo $searchValue;?>" class="form-control" name="search"  style="border: 1px solid #ced4da !important;" required="" oninvalid="this.setCustomValidity('Thêm tựa đề')" oninput="setCustomValidity('')">
+									</div>
+									<div class="form-group col-sm-12 col-md-12 col-lg-4">
+										<label>Chọn chủ đề</label>
+										<select name="topic" class="form-control">
+											<option value="Tất cả">Tất cả</option>
+											<option value="MOBILE">MOBILE</option>
+
+											<option value="TỔNG HỢP" disabled>----INTERNET----</option>
+											<option value="Digital Marketing">Digital Marketing</option>
+											<option value="Media">Media</option>
+
+											<option value="TỔNG HỢP" disabled>----GAME----</option>
+											<option value="Điện thoại">Điện thoại</option>
+											<option value="PC">PC</option>
+											
+											<option value="TỔNG HỢP" disabled>----KHÁM PHÁ----</option>
+											<option value="Thủ thuật">Thủ thuật</option>
+											<option value="Xu hướng">Xu hướng</option>
+											<option value="Tri thức">Tri thức</option>
+
+											<option value="TỔNG HỢP" disabled>----PHẦN MỀM----</option>
+											<option value="Android/iOS">Android/iOS</option>
+											<option value="Windows/MacOS">Windows/MacOS</option>
+										</select>
+									</div>
+									<div class="form-group col-sm-12 col-md-12 col-lg-4">
+										<label>Thời gian</label>
+										<select name="time" class="form-control">
+											<option value="Tất cả">Tất cả</option>
+											<option value="1 ngày qua">1 ngày qua</option>
+											<option value="1 tuần qua">1 tuần qua</option>
+											<option value="1 tháng qua">1 tháng qua</option>
+										</select>
+									</div>
+									<div class="form-group col-sm-12 col-md-12 col-lg-4">
+										<label>Sắp xếp theo</label>
+										<select name="sort" class="form-control">
+											<option value="Phổ biến nhất">Phổ biến nhất</option>
+											<option value="Mới nhất">Mới nhất</option>
+										</select>
+									</div>
+								</div>
+							</form>
+					</div>
     				<div class="row">
 						<div class="col-12">
 							<div class="block-title-2">
-								<h3>MỚI CẬP NHẬT</h3>
+								<h3>KẾT QUẢ TÌM KIẾM</h3>
 							</div>
     					</div>
 		    			<!-- Block Style 13 -->
@@ -42,72 +94,6 @@
 		    			</div>
 		    			<!-- /.Block Style 13 -->
 		    		</div>
-    			</div>
-    			<div class="col-12 col-lg-4">
-    				<div class="row">
-    					<!-- Block Style 6 & 4 -->
-		    			<div class="col-12">
-			    			<div class="ts-space20"></div>
-							<div class="block-style-6">
-								<div class="block-title-1">
-									<h3>TWITTER FEED</h3>
-									<img src="<?php echo BASE_VIEW;?>/assets/images/svg/more-1.svg" alt="Zola">
-								</div>
-								<div class="tweets">
-					         		<!-- Item -->
-					         		<div class="item">
-					         			<a href="#">
-						         			<div class="tweet-img">
-						         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-						         			</div>
-						         			<div class="tweet-content">
-						         				<i class="fa fa-twitter"></i>
-						         				<h5>Zola News <span>@ZolaNews</span></h5>
-						         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-						         			</div>
-						         		</a>
-					         		</div>
-					         		<!-- /.Item -->
-					         		<!-- Item -->
-					         		<div class="item">
-					         			<a href="#">
-						         			<div class="tweet-img">
-						         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-						         			</div>
-						         			<div class="tweet-content">
-						         				<i class="fa fa-twitter"></i>
-						         				<h5>Zola News <span>@ZolaNews</span></h5>
-						         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-						         			</div>
-						         		</a>
-					         		</div>
-					         		<!-- /.Item -->
-					         		<!-- Item -->
-					         		<div class="item">
-					         			<a href="#">
-						         			<div class="tweet-img">
-						         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-						         			</div>
-						         			<div class="tweet-content">
-						         				<i class="fa fa-twitter"></i>
-						         				<h5>Zola News <span>@ZolaNews</span></h5>
-						         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-						         			</div>
-						         		</a>
-					         		</div>
-					         		<!-- /.Item -->
-					         	</div>
-							</div>
-							<div class="ts-space50"></div>
-							<div class="block-style-4">
-								<a href="#">
-									<img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_01.jpg" alt="Zola">
-								</a>
-							</div>
-							<div class="ts-space50"></div>
-						</div>
-						<!-- Block Style 6 & 4 -->
-    				</div>
     			</div>
     		</div>
     	</div>

@@ -6,19 +6,20 @@
 
     if (!empty($_POST)) {
         $offset = $_POST["offset"];
+        $offset = 3 + $offset;
         $morePages = $db->query("
             SELECT id, title, label, url, topic, created
             FROM pages
-            LIMIT 3 OFFSET ". $offset 
+            ORDER by id desc
+            LIMIT ". (string)$offset . ",3"
         );
-        var_dump($morePages);
         if ($morePages!==FALSE){
             $morePages = $morePages->fetchAll(PDO::FETCH_ASSOC);
             $myArr = array();
             $myObj = new stdClass();
             foreach ($morePages as $page){
                 $arr = array('title' => $page['title'], 'id' => $page['id'], 'created' => $page['created'],
-                    'topic' => $page['topic'],'label' => $page['label']);
+                    'topic' => $page['topic'],'label' => $page['label'], 'url'=>$page['url']);
                 array_push($myArr,$arr);
             }            
             echo json_encode($myArr);
