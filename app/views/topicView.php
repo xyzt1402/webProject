@@ -46,30 +46,6 @@
                         </div>
                     </div>    
                     <?php endforeach;?>                    
-                    <div class="ts-space20"></div>
-                    <!-- Pagination -->
-                    <div class="col-12">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <span class="page-link">Prev</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">01</a></li>
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">
-                                    02
-                                    <span class="sr-only">(current)</span>
-                                </span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">03</a></li>
-                            <li class="page-item"><a class="page-link" href="#">04</a></li>
-                            <li class="page-item"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">18</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.Pagination -->
                     <div class="ts-space25"></div>
                 </div>
             </div>

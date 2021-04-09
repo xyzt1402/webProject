@@ -87,7 +87,7 @@
 	            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	                <ul class="navbar-nav">
 	                	<li class="nav-item">
-	                        <a class="nav-link" href="<?php echo BASE_URL;?>/topic.php?topic=MOBILE" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	                        <a class="nav-link" href="<?php echo BASE_URL;?>/topic.php?topic=mobile" role="button" aria-haspopup="true" aria-expanded="false">
 								MOBILE
 	                        </a>
 	                    </li>
@@ -99,7 +99,7 @@
 	                        </a>
 	                        <ul class="dropdown-menu">
 	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Digital Marketing" class="dropdown-item">Digital Marketing</a></li>
-	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Digital Marketing" class="dropdown-item">Media</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Media" class="dropdown-item">Media</a></li>
 	                        </ul>
 	                    </li>
 	                </ul>
@@ -109,8 +109,8 @@
 							GAME
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Digital Marketing" class="dropdown-item">PC</a></li>
-	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Digital Marketing" class="dropdown-item">Điện thoại</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Game PC" class="dropdown-item">PC</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Game Điện thoại" class="dropdown-item">Điện thoại</a></li>
 	                        </ul>
 	                    </li>
 	                </ul>
@@ -120,9 +120,9 @@
 							KHÁM PHÁ
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="Aerospace-and-defence.html" class="dropdown-item">Thủ thuật</a></li>
-	                            <li><a href="Aerospace-and-defence.html" class="dropdown-item">Xu hướng</a></li>
-	                            <li><a href="Aerospace-and-defence.html" class="dropdown-item">Tri thức</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Thủ thuật" class="dropdown-item">Thủ thuật</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Xu hướng" class="dropdown-item">Xu hướng</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Tri thức" class="dropdown-item">Tri thức</a></li>
 	                        </ul>
 	                    </li>
 	                </ul>
@@ -132,8 +132,8 @@
 							PHẦN MỀM
 	                        </a>
 	                        <ul class="dropdown-menu">
-	                            <li><a href="Aerospace-and-defence.html" class="dropdown-item">Android/iOS</a></li>
-	                            <li><a href="Aerospace-and-defence.html" class="dropdown-item">Windows/MacOS</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Android/iOS" class="dropdown-item">Android/iOS</a></li>
+	                            <li><a href="<?php echo BASE_URL;?>/topic.php?topic=Windows/MacOS" class="dropdown-item">Windows/MacOS</a></li>
 	                        </ul>
 	                    </li>
 	                </ul>

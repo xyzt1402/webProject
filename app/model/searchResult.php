@@ -15,6 +15,5 @@
         ");
         if ($searchPages!==FALSE){
             $searchPages = $searchPages->fetchAll(PDO::FETCH_ASSOC);
-        }
-        
+        }        
     }

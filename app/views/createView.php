@@ -50,8 +50,8 @@
 											<option value="Media">Media</option>
 
 											<option value="TỔNG HỢP" disabled selected>----GAME----</option>
-											<option value="Điện thoại">Điện thoại</option>
-											<option value="PC">PC</option>
+											<option value="Game Điện thoại">Điện thoại</option>
+											<option value="Game PC">PC</option>
 											
 											<option value="TỔNG HỢP" disabled selected>----KHÁM PHÁ----</option>
 											<option value="Thủ thuật">Thủ thuật</option>
