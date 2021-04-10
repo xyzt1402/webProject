@@ -55,13 +55,14 @@
 		    			</div>
 		    			<div class="user-profile">
 							<?php if (!empty($_SESSION['username'])): ?>
-								<img src="<?php 
+								<img <?php 
 									if (!empty($_SESSION['gId'])) {
-										echo $_SESSION['gId'];
+										echo "src='".$_SESSION['gId']."'";
 									}else{
-										echo BASE_VIEW.'/assets/images/user1.jpg';
+										echo "avatar='".$_SESSION['username']."'";
 									}
-									?>">
+									?>
+								>
 								<p><?php echo $_SESSION['username'];?> <i class="fa fa-chevron-down"></i></p>
 								<div class="user-menu">
 									<ul>
@@ -82,7 +83,7 @@
 		<nav class="navbar-menu navbar navbar-expand-lg">
 	        <div class="container navbar-container">
 	            <!-- Logo -->
-	            <a class="navbar-brand background-logo" href="<?php echo BASE_URL;?>"><img src="<?php echo BASE_VIEW;?>/assets/images/logo-01.png" alt="Zola"></a>
+	            <a class="navbar-brand background-logo" href="<?php echo BASE_URL;?>"><img style="width: auto; height: 36px" src="<?php echo BASE_VIEW;?>/assets/images/logo.png" alt="Zola"></a>
 	            <!-- /.Logo -->
 	            <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	                <ul class="navbar-nav">

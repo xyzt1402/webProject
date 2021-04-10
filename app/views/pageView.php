@@ -148,13 +148,13 @@
 									?>
 									<a href="#">
 										<div class="tweet-img">
-											<img style="width: 40px; height: 40px; border-radius: 100%" src="<?php 
-													if (!empty($userInfo['gId'])) {
-														echo $userInfo['gId'];
+											<img style="width: auto; height: 40px" src="<?php 
+													if (!empty($_SESSION['gId'])) {
+														echo $_SESSION['gId'];
 													}else{
 														echo BASE_VIEW.'/assets/images/user1.jpg';
 													}
-									?>">
+									?>">>
 										</div>
 										<div class="tweet-content">
 											<h5><?php echo $userInfo['username'];?> <span><?php echo $comment['created'];?></span></h5>

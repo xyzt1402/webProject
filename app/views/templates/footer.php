@@ -4,7 +4,7 @@
 			<div class="row">
 			   	<div class="ft-column col-md-12 col-lg-4">
 		         	<div class="logo">
-		         		<a href="#"><img src="<?php echo BASE_VIEW;?>/assets/images/footer_logo.png" alt="Zola"></a>
+		         		<a href="#"><img style="width: auto; height:45" src="<?php echo BASE_VIEW;?>/assets/images/logo.png" alt="Zola"></a>
 		         	</div>
 		         	<p>Trang tin tức về công nghệ nổi tiếng tại KMA</p>
 		         	<ul class="ft_social_links">
@@ -68,6 +68,7 @@
 	<script src="<?php echo BASE_VIEW;?>/assets/js/scripts.js"></script>
 	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/quicksearch.js"></script>
 	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/pageNum.js"></script>
+	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/letteravar.js"></script>
 
 </body>
 </html>
