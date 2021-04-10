@@ -13,13 +13,16 @@
 								<h1><?php echo $page['title']?></h1>
 								<div class="list-users-05">
 				    				<ul class="images">
-				    					<li><img src="<?php 
-											if ($userInfo['gId']!="") {
-												echo $userInfo['gId'];
-											}else{
-												echo BASE_VIEW.'/assets/images/user1.jpg';
-											}
-									?>"></li>
+				    					<li>
+											<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+												if (!empty($userInfo['gId'])) {
+													echo "src='".$userInfo['gId']."'";
+												}else{
+													echo "avatar='".$userInfo['username']."'";
+												}
+												?>
+											>
+										</li>
 				    				</ul>
 				    				<p><span><?php echo $userInfo['username'];?></span></p>
 				    				<div class="item-wrapper">
