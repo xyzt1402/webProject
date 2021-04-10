@@ -3,16 +3,6 @@
 <!-- Section Slider 05 -->
 <div id="section-slider" class="slider05 v3">
 	<!-- Slider Content -->
-	<div class="slider-content">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<a href="index.html"><img src="<?php echo BASE_VIEW; ?>/assets/images/logo-small-2.png" alt="Zola"></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.Slider Content -->
 	<!-- Slider Image -->
 	<div class="slider-image">
 		<img class="img-fluid" src="<?php echo BASE_VIEW; ?>/assets/images/slider6.jpg" alt="Zola">

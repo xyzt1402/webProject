@@ -122,7 +122,7 @@
 							<h3>BÌNH LUẬN</h3>
 							<img src="<?php echo BASE_VIEW;?>/assets/images/svg/more-1.svg" alt="Zola">
 						</div>
-						<div class="tweets">
+						<div class="tweets" id="commentPost">
 							<div class="add-comment">
 								<!-- <div class="thumbnail-img">
 									<img src="<?php echo BASE_VIEW;?>/assets/images/profile_23.jpg" alt="Zola">
@@ -133,14 +133,13 @@
 											<div class="form-group col-12">
 												<input type="hidden" name="userId" value="<?php echo $_SESSION['id'];?>">
 												<input type="hidden" name="pageId" value="<?php echo $page['id'];?>">
-												<textarea onkeydown="pressed(event)" class="form-control" name="message" placeholder="Viết bình luận ..." required=""></textarea>
+												<textarea onkeydown="pressed(event)" class="form-control" name="message" id="message" placeholder="Viết bình luận ..." required=""></textarea>
 											</div>
 										</div>
 									</form>
 								</div>
 							</div>
 							<?php foreach($comments as $comment):?>
-								<!-- Item -->
 								<div class="item">
 									<?php 
 										$id = $comment['userId'];
@@ -148,13 +147,14 @@
 									?>
 									<a href="#">
 										<div class="tweet-img">
-											<img style="width: auto; height: 40px" src="<?php 
-													if (!empty($_SESSION['gId'])) {
-														echo $_SESSION['gId'];
-													}else{
-														echo BASE_VIEW.'/assets/images/user1.jpg';
-													}
-									?>">>
+											<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+												if (!empty($userInfo['gId'])) {
+													echo "src='".$userInfo['gId']."'";
+												}else{
+													echo "avatar='".$userInfo['username']."'";
+												}
+												?>
+											>
 										</div>
 										<div class="tweet-content">
 											<h5><?php echo $userInfo['username'];?> <span><?php echo $comment['created'];?></span></h5>
@@ -162,7 +162,6 @@
 										</div>
 									</a>
 								</div>
-								<!-- /.Item -->
 							<?php endforeach ?>
 			         	</div>
 					</div>
@@ -191,7 +190,42 @@
 		var form = document.getElementById('commentForm');
 		if (e.key=="Enter"){
 			if (a!='null'){
-				form.submit()
+				$.ajax({
+					url: '<?php echo BASE_URL;?>/app/model/addComment.php',
+					type: 'POST',
+					data: {
+						userId: '<?php echo $_SESSION['id'];?>',
+						pageId: '<?php echo $page['id'];?>',
+						message: document.getElementById('message').value
+					},
+					success: function(msg) {
+						var commentPost = document.getElementById('commentPost');
+						
+						var item = document.createElement('div');
+						item.setAttribute('class','item');
+						item.innerHTML = `
+						<a href="#">
+							<div class="tweet-img">
+							<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+									if (!empty($_SESSION['gId'])) {
+										echo "src='".$_SESSION['gId']."'";
+									}else{
+										echo "avatar='".$_SESSION['username']."'";
+									}
+									?>>
+							</div>
+							<div class="tweet-content">
+							<h5><?php echo $_SESSION['username'];?><span>2021-04-10 20:35:49</span></h5>
+							<p>${document.getElementById('message').value}</p>
+							</div>
+						</a>
+								`
+						commentPost.insertBefore(item,commentPost.childNodes[2]);
+						document.getElementById('message').value = "";
+
+					}               
+				});
+				// form.submit()
 			}else{
 				window.location.href = "login.php";
 			}
