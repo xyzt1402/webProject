@@ -5082,37 +5082,36 @@ body.comment-overlay:after {
     background-color: #f96d00;
 }
 /* Add Comment */
-.block-style-31 .content-wrapper .add-comment .thumbnail-img{
+.add-comment .thumbnail-img{
 	display: inline-block;
 	float: left;
-	top: 22px;
+	top: 40px;
     position: relative;
 }
-.block-style-31 .content-wrapper .add-comment .thumbnail-img img{
+.add-comment .thumbnail-img img{
 	width: 40px;
 	height: 40px;
 	border-radius: 100%;
 }
-.block-style-31 .content-wrapper .add-comment .form-comment{
-	width: 540px;
+.add-comment .form-comment{
+	width: 100%;
     display: inline-block;
-    margin-left: 20px;
 }
-.block-style-31 .content-wrapper .add-comment .form-comment form{
+.add-comment .form-comment form{
 	margin-bottom: 13px;
 }
-.block-style-31 .content-wrapper .add-comment .form-comment textarea {
+.add-comment .form-comment textarea {
     font-family: 'Roboto-Regular';
     color: #6f7885;
     font-size: 16px;
-    border: 1px solid #eeeeee !important;
+    border: 1.5px solid #cfcfcf !important;
     background: transparent;
-    border-radius: 3px;
+    border-radius: 5px;
     padding: 20px 20px;
     letter-spacing: 0;
     margin-bottom: 15px;
 }
-.block-style-31 .content-wrapper .add-comment .form-comment button{
+.add-comment .form-comment button{
 	font-family: 'Lora-Regular';
     font-size: 12px;
     background: #d9d9d7;
@@ -5128,7 +5127,7 @@ body.comment-overlay:after {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-.block-style-31 .content-wrapper .add-comment .form-comment button:hover{
+.add-comment .form-comment button:hover{
     background: #f96d00;
     color: #ffffff;
     -webkit-transition: all 0.2s ease-in-out;

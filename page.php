@@ -8,6 +8,7 @@
 
         
         //get data from database with that id
+        require MODEL_ROOT . '/getComment.php';
         require MODEL_ROOT . '/getPage.php';
         require MODEL_ROOT . '/get4PopularPages.php';
 

@@ -7,14 +7,21 @@
         if (!empty($_POST['topic'])){
             $topic = $_POST['topic'];
         }
+        $topic2 = $topic;
         if ($topic == "Tất cả"){
             $topic = "";
         }
         if (!empty($_POST['time'])){
             $time = $_POST['time'];
+            $time2 = $time;
+        }else{
+            $time2 = "Tất cả";
         }
         if (!empty($_POST['sort'])){
             $sort = $_POST['sort'];
+            $sort2 =$sort;
+        }else{
+            $sort2 = "Mới nhất";
         }
         function convertTime($so){
             // Current date and time

@@ -17,7 +17,7 @@
 									</div>
 									<div class="form-group col-sm-12 col-md-12 col-lg-4">
 										<label>Chọn chủ đề</label>
-										<select name="topic" class="form-control">
+										<select name="topic" class="form-control" onchange="this.form.submit();" id="topicSelect">
 											<option value="Tất cả">Tất cả</option>
 											<option value="MOBILE">MOBILE</option>
 
@@ -41,7 +41,7 @@
 									</div>
 									<div class="form-group col-sm-12 col-md-12 col-lg-4">
 										<label>Thời gian</label>
-										<select name="time" class="form-control">
+										<select name="time" class="form-control" id="time" onchange="this.form.submit();">
 											<option value="Tất cả">Tất cả</option>
 											<option value="1 ngày qua">1 ngày qua</option>
 											<option value="1 tuần qua">1 tuần qua</option>
@@ -50,9 +50,9 @@
 									</div>
 									<div class="form-group col-sm-12 col-md-12 col-lg-4">
 										<label>Sắp xếp theo</label>
-										<select name="sort" class="form-control">
-											<option value="Phổ biến nhất">Phổ biến nhất</option>
+										<select name="sort" class="form-control" id="sort" onchange="this.form.submit();">
 											<option value="Mới nhất">Mới nhất</option>
+											<option value="Phổ biến nhất">Phổ biến nhất</option>
 										</select>
 									</div>
 								</div>
@@ -99,7 +99,26 @@
     	</div>
     </div>
     <!-- /.Section Contents -->
-
+<script>
+	var topic = document.getElementById('topicSelect');
+	for (var i = 0; i<topic.childElementCount;i++){
+		if (topic.children[i].value=="<?php echo $topic2;?>"){
+			topic.children[i].setAttribute('selected','selected');
+		}
+	}
+	var topic = document.getElementById('time');
+	for (var i = 0; i<topic.childElementCount;i++){
+		if (topic.children[i].value=="<?php echo $time2;?>"){
+			topic.children[i].setAttribute('selected','selected');
+		}
+	}
+	var topic = document.getElementById('sort');
+	for (var i = 0; i<topic.childElementCount;i++){
+		if (topic.children[i].value=="<?php echo $sort2;?>"){
+			topic.children[i].setAttribute('selected','selected');
+		}
+	}
+</script>
 <?php require('templates/footer.php');?>
 
 

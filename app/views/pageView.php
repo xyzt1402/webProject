@@ -70,31 +70,7 @@
 			    			<!-- Block Style 19 -->
 			    			<div class="block-style-19">
 			    				<div class="content-wrapper">
-				    				<div class="like">
-				    					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-											 viewBox="0 0 481.567 481.567" style="enable-background:new 0 0 481.567 481.567;" xml:space="preserve">
-												<path d="M424.7,55.841c-19.8-15.2-43.3-25-68.1-28.2c-42.6-5.6-84.3,7.4-115.8,35.6c-31.5-28.5-73.4-41.5-116.2-35.8
-													c-24.8,3.3-48.4,13.2-68.3,28.6c-35.8,27.9-56.4,69.6-56.3,114.6c0,38.5,15.1,74.8,42.4,102.1l172.9,172.9
-													c6.6,6.6,15.2,9.8,23.8,9.8c8.6,0,17.2-3.3,23.8-9.8l26.8-26.8c7-7,7-18.4,0-25.5c-7-7-18.4-7-25.5,0l-25.1,25.1l-171.2-171.3
-													c-20.5-20.5-31.8-47.7-31.9-76.7c0-33.7,15.4-65.1,42.4-86.1c14.8-11.5,32.4-18.9,50.9-21.3c34.2-4.5,67.6,6.7,91.7,30.9
-													l19.8,19.8l19.6-19.6c24-24.1,57.4-35.3,91.5-30.8c18.5,2.4,36,9.7,50.8,21c28.2,21.7,43.8,54.4,42.8,89.6
-													c-0.8,27.7-12.9,54.6-33.9,75.7l-91.2,91.1c-7,7-7,18.4,0,25.5c7,7,18.4,7,25.5,0l91.2-91.2c27.6-27.6,43.4-63.1,44.4-100.1
-													C482.9,128.041,462.2,84.641,424.7,55.841z"/>
-										</svg>
-				    				</div>
 				    				<div class="share">
-				    					<div class="item">
-				    						<i class="fa fa-facebook"></i> 62
-				    					</div>
-				    					<div class="item">
-				    						<i class="fa fa-twitter"></i> 73
-				    					</div>
-				    					<div class="item">
-				    						<i class="fa fa-instagram"></i> 11
-				    					</div>
-				    					<div class="item">
-				    						<i class="fa fa-pinterest"></i> 5
-				    					</div>
 				    				</div>
 				    				<div class="comment">
 				    					<svg enable-background="new 0 0 488 488" version="1.1" viewBox="0 0 488 488" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
@@ -109,55 +85,6 @@
 			    			</div>
 			    			<!-- /.Block Style 19 -->
 			    			<!-- Block Style 20 -->
-			    			<div class="block-style-20">
-			    				<div class="heading">
-			    					<h1>Related Posts</h1>
-			    				</div>
-			    				<div class="content-wrapper">
-			    					<!-- Item -->
-									<div class="item">
-										<a href="#">
-											<div class="thumbnail">
-												<img class="img-responsive" src="<?php echo BASE_VIEW;?>/assets/images/thumbnail_80.jpg" alt="Zola">
-											</div>
-											<div class="description">
-												<h6>ECONOMY</h6>
-												<h3>Happily engaged: the young singer now a member of the big screen</h3>
-												<p>Sed porta sollicitudin eros, vel sagittis turpis con- sequat nec. Donec ac viverra ligula.</p>
-											</div>
-										</a>
-									</div>
-									<!-- /.Item -->
-									<!-- Item -->
-									<div class="item">
-										<a href="#">
-											<div class="thumbnail">
-												<img class="img-responsive" src="<?php echo BASE_VIEW;?>/assets/images/thumbnail_81.jpg" alt="Zola">
-											</div>
-											<div class="description">
-												<h6>ECONOMY</h6>
-												<h3>Happily engaged: the young singer now a member of the big screen</h3>
-												<p>Sed porta sollicitudin eros, vel sagittis turpis con- sequat nec. Donec ac viverra ligula.</p>
-											</div>
-										</a>
-									</div>
-									<!-- /.Item -->
-									<!-- Item -->
-									<div class="item">
-										<a href="#">
-											<div class="thumbnail">
-												<img class="img-responsive" src="<?php echo BASE_VIEW;?>/assets/images/thumbnail_82.jpg" alt="Zola">
-											</div>
-											<div class="description">
-												<h6>ECONOMY</h6>
-												<h3>Happily engaged: the young singer now a member of the big screen</h3>
-												<p>Sed porta sollicitudin eros, vel sagittis turpis con- sequat nec. Donec ac viverra ligula.</p>
-											</div>
-										</a>
-									</div>
-									<!-- /.Item -->
-								</div>
-			    			</div>
 			    			<!-- Block Style 20 -->
 						</div>
 						
@@ -190,70 +117,53 @@
 						</div>
     				</div>
     				<div class="ts-space50"></div>
-    				<div class="block-style-5">
-						<div class="block-title">
-							<h3>OUR SPONSORS</h3>
-						</div>
-						<div class="block-content">
-							<div class="block-wrapper">
-								<ul>
-									<li><a href="#"><img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_02.jpg" alt="Zola"></a></li>
-									<li><a href="#"><img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_03.jpg" alt="Zola"></a></li>
-									<li><a href="#"><img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_04.jpg" alt="Zola"></a></li>
-									<li><a href="#"><img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_05.jpg" alt="Zola"></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="ts-space50"></div>
 					<div class="block-style-6">
 						<div class="block-title-1">
-							<h3>TWITTER FEED</h3>
+							<h3>BÌNH LUẬN</h3>
 							<img src="<?php echo BASE_VIEW;?>/assets/images/svg/more-1.svg" alt="Zola">
 						</div>
 						<div class="tweets">
-			         		<!-- Item -->
-			         		<div class="item">
-			         			<a href="#">
-				         			<div class="tweet-img">
-				         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-				         			</div>
-				         			<div class="tweet-content">
-				         				<i class="fa fa-twitter"></i>
-				         				<h5>Zola News <span>@ZolaNews</span></h5>
-				         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-				         			</div>
-				         		</a>
-			         		</div>
-			         		<!-- /.Item -->
-			         		<!-- Item -->
-			         		<div class="item">
-			         			<a href="#">
-				         			<div class="tweet-img">
-				         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-				         			</div>
-				         			<div class="tweet-content">
-				         				<i class="fa fa-twitter"></i>
-				         				<h5>Zola News <span>@ZolaNews</span></h5>
-				         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-				         			</div>
-				         		</a>
-			         		</div>
-			         		<!-- /.Item -->
-			         		<!-- Item -->
-			         		<div class="item">
-			         			<a href="#">
-				         			<div class="tweet-img">
-				         				<img src="<?php echo BASE_VIEW;?>/assets/images/tweet-img2.png" alt="Zola">
-				         			</div>
-				         			<div class="tweet-content">
-				         				<i class="fa fa-twitter"></i>
-				         				<h5>Zola News <span>@ZolaNews</span></h5>
-				         				<p>Phasellus pulvinar iaculis nunc at placerat. Sed porta sollicitudin eros, vel sagittis turpis consequat <span>envato.d.pr/h7ivMe</span></p>
-				         			</div>
-				         		</a>
-			         		</div>
-			         		<!-- /.Item -->
+							<div class="add-comment">
+								<!-- <div class="thumbnail-img">
+									<img src="<?php echo BASE_VIEW;?>/assets/images/profile_23.jpg" alt="Zola">
+								</div> -->
+								<div class="form-comment">
+									<form method="POST" id="commentForm" action="<?php echo BASE_URL;?>/app/model/addComment.php" onsubmit="alert('run')">
+										<div class="row">
+											<div class="form-group col-12">
+												<input type="hidden" name="userId" value="<?php echo $_SESSION['id'];?>">
+												<input type="hidden" name="pageId" value="<?php echo $page['id'];?>">
+												<textarea onkeydown="pressed(event)" class="form-control" name="message" placeholder="Viết bình luận ..." required=""></textarea>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<?php foreach($comments as $comment):?>
+								<!-- Item -->
+								<div class="item">
+									<?php 
+										$id = $comment['userId'];
+										require MODEL_ROOT . '/getUserComment.php';
+									?>
+									<a href="#">
+										<div class="tweet-img">
+											<img style="width: 40px; height: 40px; border-radius: 100%" src="<?php 
+													if (!empty($userInfo['gId'])) {
+														echo $userInfo['gId'];
+													}else{
+														echo BASE_VIEW.'/assets/images/user1.jpg';
+													}
+									?>">
+										</div>
+										<div class="tweet-content">
+											<h5><?php echo $userInfo['username'];?> <span><?php echo $comment['created'];?></span></h5>
+											<p><?php echo $comment['message'];?></p>
+										</div>
+									</a>
+								</div>
+								<!-- /.Item -->
+							<?php endforeach ?>
 			         	</div>
 					</div>
 					<div class="ts-space50"></div>
@@ -269,5 +179,23 @@
     </div>
     <!-- /.Section Contents -->
 
-	
+<script>
+	function pressed(e){
+		var a = "<?php 
+			if (isset($_SESSION['username'])){
+				echo $_SESSION['username'];
+			}else{
+				echo 'null';
+			}
+			?>"
+		var form = document.getElementById('commentForm');
+		if (e.key=="Enter"){
+			if (a!='null'){
+				form.submit()
+			}else{
+				window.location.href = "login.php";
+			}
+		}
+	}
+</script>	
 <?php require('templates/footer.php');?>
