@@ -22,7 +22,7 @@
                 ");
                 $insertUser->execute([
                     'username' => $name,
-                    'password' => $password
+                    'password' => password_hash($password,PASSWORD_BCRYPT,['cost'=>12])
                 ]);
                 header('Location: '. BASE_URL);
             }

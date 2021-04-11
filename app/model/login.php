@@ -6,18 +6,19 @@
         if ($username == "" || $password == "") {
             echo "username hoặc password bạn không được để trống!";
         } else {
+
             $loginInfo = $db->query("
-                SELECT *
+                SELECT password, id
                 FROM user
-                WHERE username = '$username' and password = '$password'
+                WHERE username = '$username'
                 LIMIT 1
-            ")->fetchAll(PDO::FETCH_ASSOC);
-            $num_rows = count($loginInfo);
-            if ($num_rows == 0) {
+            ")->fetch(PDO::FETCH_ASSOC);
+
+            if ($loginInfo==false or password_verify($password, $loginInfo['password'])==false){
                 echo "tên đăng nhập hoặc mật khẩu không đúng !";
-            } else {
+            }else{
                 $_SESSION['username'] = $username;
-                $_SESSION['id'] = $loginInfo[0]['id'];
+                $_SESSION['id'] = $loginInfo['id'];
                 header('Location: '. BASE_URL);
             }
         }
