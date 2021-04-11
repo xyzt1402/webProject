@@ -8,7 +8,7 @@
         } else {
 
             $loginInfo = $db->query("
-                SELECT password, id
+                SELECT password, id, permission 
                 FROM user
                 WHERE username = '$username'
                 LIMIT 1
@@ -17,9 +17,14 @@
             if ($loginInfo==false or password_verify($password, $loginInfo['password'])==false){
                 echo "tên đăng nhập hoặc mật khẩu không đúng !";
             }else{
+                if ( $loginInfo['permission'] ==0)
+                {
+                    echo "Bạn không có quyền đăng nhập";
+                } else {
                 $_SESSION['username'] = $username;
                 $_SESSION['id'] = $loginInfo['id'];
                 header('Location: '. BASE_URL);
+                }
             }
         }
     }

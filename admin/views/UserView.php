@@ -42,7 +42,7 @@
                     <td style="font-size: 10px"><?php echo $row['password']; ?></td>
                     <td>
                         <select name="permission" onchange="changePermission(this)" userId="<?php echo $row['id'];?>">
-                            <?php for ($i = 0; $i<6;$i++):?>
+                            <?php for ($i = 0; $i<4;$i++):?>
                                 <option <?php
                                     if ($i == $row['permission']){
                                         echo "selected";

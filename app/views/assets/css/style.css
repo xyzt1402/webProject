@@ -2447,7 +2447,6 @@ nav.navbar-menu .mega-menu .megamenu-dropdown-list li a:hover {
 .bg-orange{
 	background-color: #f96d00;
 }
-
 /* Block Title 1 */
 .block-title-1{
 	padding:22px 30px;
@@ -3464,6 +3463,19 @@ nav.navbar-menu .mega-menu .megamenu-dropdown-list li a:hover {
     left: 30px;
     border-radius: 3px;
     z-index: 99;
+}
+.block-style-12 .contents .thumbnail-2 > span{
+	font-family: 'Lora-Regular';
+    font-size: 12px;
+    color: #ffffff;
+    min-width: 100px;
+    text-align: center;
+    padding: 5px 15px;
+    position: relative;
+    bottom: 25px;
+    left: 30px;
+    border-radius: 3px;
+    z-index: 199;
 }
 .block-style-12 .contents .thumbnail-1 img{
 	width: 100%;
