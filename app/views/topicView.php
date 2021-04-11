@@ -16,7 +16,7 @@
                                 <!-- Thumbnail -->
                                 <div class="thumbnail-1">
                                     <span class="bg-purple"><?PHP echo $topic;?></span>
-                                    <a href="#">
+                                    <a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $topicPage['id'];?>">
                                         <img src="<?php echo $topicPage['url']?>">
                                     </a>
                                 </div>
@@ -29,7 +29,7 @@
                                     <!-- /.line -->
                                     <!-- Title -->
                                     <div class="title">
-                                        <a href="#">
+                                        <a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $topicPage['id'];?>">
                                             <h2><?php echo $topicPage['title'];?></h2>
                                         </a>
                                     </div>
