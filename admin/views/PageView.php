@@ -31,7 +31,11 @@
             <?php foreach($pages as $row):?>
                 <tr>
                     <td><?php echo $row['id'];?></td>
-                    <td><?php echo $row['topic'];?></td>
+                    <td>
+                        <a href="http://localhost/myweb/webProject/topic.php?topic=<?php echo $row['topic'];?>" target="_blank">
+                            <?php echo $row['topic'];?>
+                        </a>
+                    </td>
                     <td>
                         <a href="http://localhost/myweb/webProject/page.php?id=<?php echo $row['id'];?>" target="_blank">
                             <?php echo $row['title'];?>
