@@ -1,56 +1,90 @@
-body{
-    font: 1em "Helveltica", sans-serif;
-    background-color: #edeff0;
-    margin: 0;
+body {
+  font: 1em "Helveltica", sans-serif;
+  background-color: #edeff0;
+  margin: 0;
 }
-.wrapper{
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    max-width: 900px;
-    background-color: #fff;
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
 }
-h1,h2,h3,h4,h5{
-    font-weight: 200%;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 200%;
 }
-input, textarea{
-    font-size: inherit;
+input,
+textarea {
+  font-size: inherit;
 }
-li{
-    padding-top: 10px;
+li {
+  padding-top: 10px;
 }
 
 input[type="text"],
-textarea{
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #bbb;
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
 }
-label{
-    display: block;
-    margin-bottom: 20px;
+label {
+  display: block;
+  margin-bottom: 20px;
 }
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }
-  th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-.faded{
-    color: #bbb,
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.faded {
+  color: #bbb;
+}
+.alert {
+  padding: 12px;
+  padding-left: 35px !important;
+  background-color: #4CAF50; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  width: 25%;
+  right: 0px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: fixed;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
