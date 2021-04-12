@@ -105,7 +105,7 @@
 
 
                                 <?php foreach ($userPages as $userPages) : ?>
-                                    <div class="col-12 col-lg-4">
+                                    <div class="col-12 col-md-6 col-lg-3">
                                         <div class="block-style-12">
                                             <!-- Contents -->
                                             <div class="contents">
