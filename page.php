@@ -13,6 +13,7 @@
         require MODEL_ROOT . '/get4PopularPages.php';
 
         require MODEL_ROOT . '/getUser.php';
+        require MODEL_ROOT . '/getTotalComment.php';
 
         require VIEW_ROOT . '/pageView.php';
     }

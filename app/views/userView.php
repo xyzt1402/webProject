@@ -11,12 +11,12 @@
                         <div class="left">
                             <div class="thumbnail-img">
                                 <img class="img-fluid" alt="ảnh đại diện" style="width: auto; height: 100px; border-radius: 100%" <?php
-                                                                                                                                    if (!empty($_SESSION['gId'])) {
-                                                                                                                                        echo "src='" . $_SESSION['gId'] . "'";
-                                                                                                                                    } else {
-                                                                                                                                        echo "avatar='" . $_SESSION['username'] . "'";
-                                                                                                                                    }
-                                                                                                                                    ?>>
+                                    if (!empty($_SESSION['gId'])) {
+                                        echo "src='" . $_SESSION['gId'] . "'";
+                                    } else {
+                                        echo "avatar='" . $_SESSION['username'] . "'";
+                                    }
+                                    ?>>
                             </div>
                             <div class="details">
                                 <h2><?php echo $_SESSION['username'] ?></h2>
@@ -48,7 +48,7 @@
 															c-0.8,27.7-12.9,54.6-33.9,75.7l-91.2,91.1c-7,7-7,18.4,0,25.5c7,7,18.4,7,25.5,0l91.2-91.2c27.6-27.6,43.4-63.1,44.4-100.1
 															C482.9,128.041,462.2,84.641,424.7,55.841z" />
                                             </svg>
-                                            <?php echo $totalView['total'] ?> lượt xem từ các bài viết của bạn
+                                            Tổng: <?php echo $totalView['total'] ?> lượt xem
                                         </a>
                                     </div>
                                     <div class="item">
@@ -76,7 +76,7 @@
                                                 <path d="M292.001,315h-61c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h61c11.046,0,20-8.954,20-20
 															C312.001,323.954,303.047,315,292.001,315z" />
                                             </svg>
-                                            <?php echo $totalView['totalPages'] ?> Post
+                                            <?php echo $totalView['totalPages'] ?> Bài viết
                                         </a>
                                     </div>
                                 </div>
@@ -84,7 +84,7 @@
                         </div>
                         <div class="right">
                             <ul class="social_links">
-                                <li><a href="https://www.facebook.com/kimson.quach"><i class="fa fa-facebook fa-lg"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram fa-lg"></i></a></li>
                                 <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
@@ -110,9 +110,11 @@
                                             <!-- Contents -->
                                             <div class="contents">
                                                 <!-- Thumbnail -->
-                                                <div class="thumbnail-1">
-                                                <span class="bg-purple"><?PHP echo $userPages['topic']; ?></span>
-                                                    <a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $userPages['id']; ?>">
+                                                <div class="thumbnail-1" pageId="<?php echo $userPages['id'];?>">
+                                                    <span class="myTopic"><?PHP echo $userPages['topic']; ?></span>
+                                                    <span class="myDeleteTopic" onclick="topicDelete(this)"><i class="fa fa-trash fa-2x"></i></span>
+                                                    <span class="myEditTopic" onclick="topicEdit(this)"><i class="fa fa-pencil fa-2x"></i></span>
+                                                    <a>
                                                         <img alt="ảnh bìa" src="<?php echo $userPages['url'] ?>">
                                                     </a>                                                   
                                                 </div>
@@ -155,4 +157,33 @@
 </div>
 </div>
 <!-- /.Section Contents -->
+
+<script>
+    function topicDelete(node){
+        var id = node.parentElement.getAttribute('pageId');
+        var pnode = node.parentElement.parentElement.parentElement.parentElement;
+        $.ajax({
+            url: "http://localhost/myweb/webProject/app/model/deletePage.php",
+            type: "post",
+            data: {
+                id: id
+            } ,
+            success: function (response) {
+                $(pnode).animate({
+                    padding: "0px",
+                    'opacity':'0',
+                    'font-size': "0px"
+                }, 500, function() {
+                        
+                    $(pnode).remove();      
+                });
+            }
+        });
+    }
+    function topicEdit(node){
+        var id = node.parentElement.getAttribute('pageId');
+        alert(id);
+    }
+</script>
+
 <?php require('templates/footer.php'); ?>

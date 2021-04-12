@@ -15,7 +15,7 @@
                             <div class="contents">
                                 <!-- Thumbnail -->
                                 <div class="thumbnail-1">
-                                    <span class="bg-purple"><?PHP echo $topic;?></span>
+                                    <span class="topicView"><?PHP echo $topic;?></span>
                                     <a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $topicPage['id'];?>">
                                         <img src="<?php echo $topicPage['url']?>">
                                     </a>

@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zola | Homepage 03</title>
+    <title>KMA | Bài Tập Nhóm</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo BASE_VIEW;?>/assets/images/favicon.png">
+    <link rel="shortcut icon" href="<?php echo BASE_VIEW;?>/assets/images/logo.png">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="<?php echo BASE_VIEW;?>/assets/css/bootstrap.min.css" type="text/css">
     <!-- Fonts -->
