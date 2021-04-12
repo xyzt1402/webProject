@@ -8,7 +8,7 @@
                     <div class="col-12 col-md-6 col-lg-3">
                         <div class="block-style-12">
                             <!-- Contents -->
-                            <div class="contents">
+                            <div class="contents" style="border-radius: 10px; overflow: hidden">
                                 <!-- Thumbnail -->
                                 <div class="thumbnail-1">
                                     <span class="topicView"><?PHP echo $topic; ?></span>
@@ -26,7 +26,13 @@
                                     <!-- Title -->
                                     <div class="title">
                                         <a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $topicPage['id']; ?>">
-                                            <h2><?php echo $topicPage['title']; ?></h2>
+                                            <h2><?php 
+                                            if (strlen($topicPage['title'])>40 ){
+                                                echo(substr($topicPage['title'], 0, strpos($topicPage['title'].' ', ' ', 40)) . '...');
+                                            }else{
+                                                echo $topicPage['title'];} 
+                                                ?>
+                                            </h2>
                                         </a>
                                     </div>
                                     <!-- /.Title -->

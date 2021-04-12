@@ -91,7 +91,7 @@
 					<div class="col-12 col-md-6 col-lg-3">
 						<div class="block-style-12 v2">
 							<!-- Contents -->
-							<div class="contents">
+							<div class="contents" style="border-radius: 5px; overflow: hidden">
 								<!-- Thumbnail -->
 								<div class="thumbnail-1">
 									<a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $popularPage['id'];?>">
@@ -104,13 +104,19 @@
 									<!-- Title -->
 									<div class="title">
 										<a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $popularPage['id'];?>">
-											<h2 style="font-family: 'Lora-SemiBold';"><?php echo $popularPage['title'] ?></h2>
+											<h2 style="font-family: 'Lora-SemiBold';"><?php 
+												if (strlen($popularPage['title'])>60 ){
+													echo(substr($popularPage['title'], 0, strpos($popularPage['title'].' ', ' ', 60)) . '...');
+												}else{
+													echo $popularPage['title'];} 
+													?>
+											</h2>
 										</a>
 									</div>
 									<!-- /.Title -->
 									<!-- Description -->
 									<div class="desc">
-										<p style="font-size: 0.8em"><?php echo $popularPage['label'];?></p>
+										<p style="font-size: 0.8em"><?php echo $popularPage['label']; ?></p>
 									</div>
 									<!-- /.Description -->
 								</div>
