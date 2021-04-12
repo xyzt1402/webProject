@@ -59,17 +59,19 @@ tr:nth-child(even) {
 .faded {
   color: #bbb;
 }
+.alertWrapper{
+  position: fixed;
+  width: 25%;
+  right: 0px;
+}
 .alert {
   padding: 12px;
   padding-left: 35px !important;
   background-color: #4CAF50; /* Red */
   color: white;
-  margin-bottom: 15px;
-  width: 25%;
-  right: 0px;
+  margin-bottom: 10px;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
-  position: fixed;
 }
 
 /* The close button */
