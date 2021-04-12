@@ -182,7 +182,7 @@
     }
     function topicEdit(node){
         var id = node.parentElement.getAttribute('pageId');
-        alert(id);
+        window.location.href = "http://localhost/myweb/webProject/edit.php?id="+id;
     }
 </script>
 

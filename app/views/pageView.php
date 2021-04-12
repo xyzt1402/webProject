@@ -14,7 +14,7 @@
 								<div class="list-users-05">
 				    				<ul class="images">
 				    					<li>
-											<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+											<img alt ="ảnh đại diện"style="width: auto; height: 40px; border-radius: 100%" <?php 
 												if (!empty($userInfo['gId'])) {
 													echo "src='".$userInfo['gId']."'";
 												}else{
@@ -199,7 +199,7 @@
 						var commentPost = document.getElementById('commentPost');
 						
 						var item = document.createElement('div');
-						item.setAttribute('class','item');
+						item.setAttribute('class','item');						
 						item.innerHTML = `
 						<a href="#">
 							<div class="tweet-img">
@@ -219,7 +219,7 @@
 								`
 						commentPost.insertBefore(item,commentPost.childNodes[2]);
 						document.getElementById('message').value = "";
-
+						LetterAvatar.transform();
 					}               
 				});
 				// form.submit()

@@ -66,7 +66,7 @@
 								<p><?php echo $_SESSION['username'];?> <i class="fa fa-chevron-down"></i></p>
 								<div class="user-menu">
 									<ul>
-										<li><a href="<?php echo BASE_URL.'/user.php'?>">Thông tin</a></li>
+										<li><a href="<?php echo BASE_URL.'/user.php'?>">Quản lý thông tin</a></li>
 										<li><a href="<?php echo BASE_URL.'/create.php';?>">Thêm bài viết</a></li>
 										<li><a href="<?php echo BASE_URL;?>/app/model/logout.php" onclick="googleSignOut()">Đăng Xuất</a></li>
 									</ul>
