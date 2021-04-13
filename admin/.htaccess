@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "restricted area"
-AuthUserFile C:\xampp\htdocs\myweb\webProject\admin\.htpasswd
+AuthUserFile D:\xampp\htdocs\myweb\webProject\admin\.htpasswd
 require valid-user
