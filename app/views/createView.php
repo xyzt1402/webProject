@@ -10,7 +10,6 @@
 	    	<div class="container">
 	    		<div class="row">
 	    			<div class="col-12">
-	    				<span>FORM</span>
 	    				<h1>Thêm Bài Viết</h1>
 	    			</div>
 	    		</div>
