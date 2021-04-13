@@ -15,11 +15,13 @@
             ")->fetch(PDO::FETCH_ASSOC);
 
             if ($loginInfo==false or password_verify($password, $loginInfo['password'])==false){
-                echo "tên đăng nhập hoặc mật khẩu không đúng !";
+                $error = "Tên đăng nhập hoặc Mật khẩu không đúng !";
+                header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             }else{
                 if ( $loginInfo['permission'] ==0)
                 {
-                    echo "Bạn không có quyền đăng nhập";
+                    $error =  "Bạn không có quyền đăng nhập";
+                    header('Location: ' . BASE_URL . '/error.php?error=' . $error);
                 } else {
                 $_SESSION['username'] = $username;
                 $_SESSION['id'] = $loginInfo['id'];

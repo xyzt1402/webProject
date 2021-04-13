@@ -178,42 +178,47 @@
 		var form = document.getElementById('commentForm');
 		if (e.key=="Enter"){
 			if (a!='null'){
-				$.ajax({
-					url: '<?php echo BASE_URL;?>/app/model/addComment.php',
-					type: 'POST',
-					data: {
-						userId: '<?php echo $_SESSION['id'];?>',
-						pageId: '<?php echo $page['id'];?>',
-						message: document.getElementById('message').value
-					},
-					success: function(msg) {
-						var commentPost = document.getElementById('commentPost');
-						
-						var item = document.createElement('div');
-						item.setAttribute('class','item');						
-						item.innerHTML = `
-						<a href="#">
-							<div class="tweet-img">
-							<img style="width: auto; height: 40px; border-radius: 100%" <?php 
-									if (!empty($_SESSION['gId'])) {
-										echo "src='".$_SESSION['gId']."'";
-									}else{
-										echo "avatar='".$_SESSION['username']."'";
-									}
-									?>>
-							</div>
-							<div class="tweet-content">
-							<h5><?php echo $_SESSION['username'];?><span>2021-04-10 20:35:49</span></h5>
-							<p>${document.getElementById('message').value}</p>
-							</div>
-						</a>
-								`
-						commentPost.insertBefore(item,commentPost.childNodes[2]);
-						document.getElementById('message').value = "";
-						LetterAvatar.transform();
-					}               
-				});
-				// form.submit()
+				if (document.getElementById('message').value==""){
+					alert('bình luận không được rỗng');
+					document.getElementById('message').value=="";
+				}else{
+					$.ajax({
+						url: '<?php echo BASE_URL;?>/app/model/addComment.php',
+						type: 'POST',
+						data: {
+							userId: '<?php echo $_SESSION['id'];?>',
+							pageId: '<?php echo $page['id'];?>',
+							message: document.getElementById('message').value
+						},
+						success: function(msg) {
+							var commentPost = document.getElementById('commentPost');
+							
+							var item = document.createElement('div');
+							item.setAttribute('class','item');						
+							item.innerHTML = `
+							<a href="#">
+								<div class="tweet-img">
+								<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+										if (!empty($_SESSION['gId'])) {
+											echo "src='".$_SESSION['gId']."'";
+										}else{
+											echo "avatar='".$_SESSION['username']."'";
+										}
+										?>>
+								</div>
+								<div class="tweet-content">
+								<h5><?php echo $_SESSION['username'];?><span>2021-04-10 20:35:49</span></h5>
+								<p>${document.getElementById('message').value}</p>
+								</div>
+							</a>
+									`
+							commentPost.insertBefore(item,commentPost.childNodes[2]);
+							document.getElementById('message').value = "";
+							LetterAvatar.transform();
+						}               
+					});
+				}
+
 			}else{
 				window.location.href = "login.php";
 			}

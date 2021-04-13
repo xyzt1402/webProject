@@ -101,52 +101,51 @@
                                     <h3> BÀI VIẾT CỦA BẠN</h3>
                                 </div>
                             </div>
-                            <div class="row">
-
-
-                                <?php foreach ($userPages as $userPages) : ?>
-                                    <div class="col-12 col-md-6 col-lg-3">
-                                        <div class="block-style-12">
-                                            <!-- Contents -->
-                                            <div class="contents">
-                                                <!-- Thumbnail -->
-                                                <div class="thumbnail-1" pageId="<?php echo $userPages['id'];?>">
-                                                    <span class="myTopic"><?PHP echo $userPages['topic']; ?></span>
-                                                    <span class="myDeleteTopic" onclick="topicDelete(this)"><i class="fa fa-trash fa-2x"></i></span>
-                                                    <span class="myEditTopic" onclick="topicEdit(this)"><i class="fa fa-pencil fa-2x"></i></span>
-                                                    <a>
-                                                        <img alt="ảnh bìa" src="<?php echo $userPages['url'] ?>">
-                                                    </a>                                                   
-                                                </div>
-                                                <!-- /.Thumbnail -->
-                                                <!-- Content Wrapper -->
-                                                <div class="content-wrapper">
-                                                    <!-- line -->
-                                                    <div class="line">
-                                                    </div>
-                                                    <!-- /.line -->
-                                                    <!-- Title -->
-                                                    <div class="title">
-                                                        <a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $userPages['id']; ?>">
-                                                            <h2><?php echo $userPages['title']; ?></h2>
-                                                        </a>
-                                                    </div>
-                                                    <!-- /.Title -->
-                                                    <!-- Description -->
-                                                    <div class="desc">
-                                                        <p><?php echo $userPages['label']; ?></p>
-                                                    </div>
-                                                    <!-- /.Description -->
-                                                </div>
-                                                <!-- Content Wrapper -->
+                            <?php foreach ($userPages as $userPages) : ?>
+                                <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="block-style-12">
+                                        <!-- Contents -->
+                                        <div class="contents" style="border-radius: 10px; overflow: hidden">
+                                            <!-- Thumbnail -->
+                                            <div class="thumbnail-1" pageId="<?php echo $userPages['id'];?>">
+                                                <span class="myTopic"><?PHP echo $userPages['topic']; ?></span>
+                                                <span class="myDeleteTopic" onclick="topicDelete(this)"><i class="fa fa-trash fa-2x"></i></span>
+                                                <span class="myEditTopic" onclick="topicEdit(this)"><i class="fa fa-pencil fa-2x"></i></span>
+                                                <a>
+                                                    <img alt="ảnh bìa" src="<?php echo $userPages['url'] ?>">
+                                                </a>                                                   
                                             </div>
-                                            <!-- /.Contents -->
+                                            <!-- /.Thumbnail -->
+                                            <!-- Content Wrapper -->
+                                            <div class="content-wrapper">
+                                                <!-- line -->
+                                                <div class="line">
+                                                </div>
+                                                <!-- /.line -->
+                                                <!-- Title -->
+                                                <div class="title">
+                                                    <a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $userPages['id']; ?>">
+                                                        <h2><?php 
+                                                        if (strlen($userPages['title'])>40 ){
+                                                            echo(substr($userPages['title'], 0, strpos($userPages['title'].' ', ' ', 40)) . '...');
+                                                        }else{
+                                                            echo $userPages['title'];} 
+                                                            ?></h2>
+                                                    </a>
+                                                </div>
+                                                <!-- /.Title -->
+                                                <!-- Description -->
+                                                <div class="desc">
+                                                    <p><?php echo $userPages['label']; ?></p>
+                                                </div>
+                                                <!-- /.Description -->
+                                            </div>
+                                            <!-- Content Wrapper -->
                                         </div>
+                                        <!-- /.Contents -->
                                     </div>
-                                <?php endforeach; ?>
-                                <div class="ts-space25"></div>
-                            </div>
-
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                         <!-- /.Block Style 3, 4, 5 -->
                     </div>

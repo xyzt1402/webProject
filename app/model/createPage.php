@@ -17,27 +17,32 @@ if (!empty($_POST)) {
         echo "File is an image - " . $check["mime"] . ".";
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        $error =  "File is not an image.";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         $uploadOk = 0;
     }
 
     if (file_exists($target_file)) {
-        echo "Sorry, file already exists.";
+        $error = "Sorry, file already exists.";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         $uploadOk = 0;
     }
 
     if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $error = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         $uploadOk = 0;
     }
 
     if ($uploadOk == 0) {
-        echo "Sorry, your file was not uploaded.";
+        $error = "Sorry, your file was not uploaded.";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
       } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
           echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
         } else {
-          echo "Sorry, there was an error uploading your file.";
+          $error = "Sorry, there was an error uploading your file.";
+          header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         }
       }
     if (!isset($_POST['url'])){

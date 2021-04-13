@@ -4,7 +4,8 @@
         $name = $_POST["name"];
         $password = $_POST["password"];
         if ($name == "" || $password == "") {
-            echo "username hoặc password bạn không được để trống!";
+            $error = "username hoặc password bạn không được để trống!";
+            header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         } else {
             $loginInfo = $db->query("
                 SELECT *
@@ -14,7 +15,8 @@
             ")->fetchAll(PDO::FETCH_ASSOC);
             $num_rows = count($loginInfo);
             if ($num_rows == 1) {
-                echo "Tên tài khoản đã tồn tại";
+                $error =  "Tên tài khoản đã tồn tại";
+                header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             } else {
                 $insertUser = $db->prepare("
                 INSERT INTO user (username, password)

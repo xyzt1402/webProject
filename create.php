@@ -7,7 +7,8 @@
         header('Location: index.php');
     }
     if ($userInfo['permission'] <2){
-        echo "Bạn không có quyền đăng bài";
+        $error = "Bạn không có quyền đăng bài !";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
     } else{
     require VIEW_ROOT . '/createView.php';
     }

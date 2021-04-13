@@ -5,7 +5,7 @@
         $userId = $_POST["userId"];
         $pageId = $_POST["pageId"];
         if ($message == "") {
-            echo "message không được để trống!";
+            $error =  "message không được để trống!";
         } else {
             $cmtInfo = $db->prepare("
             INSERT INTO comments (message, userId, pageId)

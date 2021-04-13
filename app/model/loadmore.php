@@ -25,6 +25,4 @@
             echo json_encode($myArr);
         }
 
-    }else{
-        echo 'abcd';
     }

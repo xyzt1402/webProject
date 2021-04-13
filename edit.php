@@ -7,7 +7,8 @@
         header('Location: index.php');
     }
     if ($userInfo['permission'] <3){
-        echo "Bạn không có quyền sửa bài";
+        $error = "Bạn không có quyền sửa bài !";
+        header('Location: ' . BASE_URL . '/error.php?error=' . $error);
     } else{
     $pageId = $_GET['id'];
     require MODEL_ROOT . '/getEditPage.php';
