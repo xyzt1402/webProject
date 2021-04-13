@@ -2107,11 +2107,11 @@ nav.navbar-menu .mega-menu .megamenu-dropdown-list li a:hover {
 #section-slider.slider02 .thumbnail-1.v3{
 	margin: 0 2px;
 	float: right;
-	margin-right: 18px;
+	margin-right: 7px;
 }
 #section-slider.slider02 .thumbnail-1.v2,
 #section-slider.slider02 .thumbnail-1.v3{
-	max-width: 280px;
+	max-width: 290px;
 	height: 552px;
 }
 #section-slider.slider02 .thumbnail-1 img{
@@ -3532,7 +3532,7 @@ nav.navbar-menu .mega-menu .megamenu-dropdown-list li a:hover {
 	padding: 30px 30px 23px;
 	background-color: #ffffff;
 	width: 270px;
-	height: 206px;
+	height: 286px;
 }
 .block-style-12 .contents .content-wrapper .line{
     margin-bottom: 25px;
@@ -3546,7 +3546,7 @@ nav.navbar-menu .mega-menu .megamenu-dropdown-list li a:hover {
     display: inline-block;
 }
 .block-style-12 .contents .content-wrapper .title h2{
-	font-family: 'Lora-Medium';
+	font-family: 'Lora-SemiBold';
 	font-size: 18px;
 	color: #393e46;
 	line-height: 27px;
