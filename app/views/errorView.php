@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Zola">
     <meta name="description" content="Concept Magazine News Blogs">
-    <title>Zola | Error 404</title>
+    <title>Lỗi | Thông báo</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="<?php echo BASE_VIEW;?>/assets/images/favicon.png">
     <!-- Bootstrap 4 -->
@@ -24,15 +24,15 @@
     <!-- Style -->
     <link rel="stylesheet" href="<?php echo BASE_VIEW;?>/assets/css/style.css" type="text/css">
 </head>
-<body class="bg-404">
+<body class="bg-404" style="background-color: red !important">
     <!-- Section Contents -->
     <div id="section-contents" class="error-404">
     	<div class="container">
     		<div class="row">
     			<div class="col-12">
     				<div class="block-style-30">
-	    				<div class="logo">
-	    					<a href="index.html"><img src="<?php echo BASE_VIEW;?>/assets/images/logo-small-1.png" class="Zola"></a>
+	    				<div class="logo" style="margin-bottom: 80px !important">
+	    					<a href="index.html"><img style="width: 160px" src="<?php echo BASE_VIEW;?>/assets/images/error_logo.png" class="Zola"></a>
 	    				</div>
 	    				<div class="header">
 	    					<h6>LỖI</h6>
@@ -47,7 +47,7 @@
                             </h1>
 	    				</div>
 	    				<div class="content-image">
-	    					<img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/coffe-404.png" alt="Zola">
+	    					<img style="height: 250px;" class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/coffe-404.png" alt="Zola">
 	    				</div>
 	    				<div class="cta-btn">
 	    					<a href="#">Quay lại</a>

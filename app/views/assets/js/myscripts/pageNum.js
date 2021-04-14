@@ -28,7 +28,7 @@ function loadMore() {
     if (timeID == null) {
         morePages = [];
         pageNum += 1;
-        var offset = pageNum * 3;
+        var offset = pageNum * 7;
         timeID = setTimeout(function () {
             request = $.ajax({
                 url: "http://localhost/myweb/webProject/app/model/loadmore.php",

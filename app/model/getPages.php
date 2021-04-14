@@ -3,5 +3,5 @@
         SELECT id, title, label, url, topic, created
         FROM pages
         ORDER BY id DESC
-        LIMIT 5
+        LIMIT 9
     ")->fetchAll(PDO::FETCH_ASSOC);

@@ -6,12 +6,12 @@
 
     if (!empty($_POST)) {
         $offset = $_POST["offset"];
-        $offset = 3 + $offset;
+        $offset = 7 + $offset;
         $morePages = $db->query("
             SELECT id, title, label, url, topic, created
             FROM pages
             ORDER by id desc
-            LIMIT ". (string)$offset . ",3"
+            LIMIT ". (string)$offset . ",7"
         );
         if ($morePages!==FALSE){
             $morePages = $morePages->fetchAll(PDO::FETCH_ASSOC);

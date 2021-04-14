@@ -1,4 +1,4 @@
-###### admin: test, pass: test
+###### admin: root, pass: toor (encryted with bcrypt)
 
 ###### permission:
 

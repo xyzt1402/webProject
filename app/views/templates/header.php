@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>KMA | Bài Tập Nhóm</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<?php echo BASE_VIEW;?>/assets/images/logo.png">
+    <link rel="shortcut icon" href="<?php echo BASE_VIEW;?>/assets/images/favicon.png">
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="<?php echo BASE_VIEW;?>/assets/css/bootstrap.min.css" type="text/css">
     <!-- Fonts -->

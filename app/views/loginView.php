@@ -55,7 +55,7 @@
 										</div>
 										<ul>
 											<li><a class="forgot" href="#">Quên mật khẩu</a></li>
-											<li><a class="register" href="#">Tạo tài khoản mới</a></li>
+											<li><a class="register" href="<?php echo BASE_URL;?>/signup.php">Tạo tài khoản mới</a></li>
 										</ul>
 									</div>
 								</div>

@@ -15,16 +15,26 @@
 				    				<ul class="images">
 				    					<li>
 											<img alt ="ảnh đại diện"style="width: auto; height: 40px; border-radius: 100%" <?php 
-												if (!empty($userInfo['gId'])) {
-													echo "src='".$userInfo['gId']."'";
+												if ($userInfo==false){
+													echo 'avatar=Anoy';
 												}else{
-													echo "avatar='".$userInfo['username']."'";
+													if (!empty($userInfo['gId'])) {
+														echo "src='".$userInfo['gId']."'";
+													}else{
+														echo "avatar='".$userInfo['username']."'";
+													}
 												}
 												?>
 											>
 										</li>
 				    				</ul>
-				    				<p><span><?php echo $userInfo['username'];?></span></p>
+				    				<p><span><?php 
+										if ($userInfo==false){
+											echo '[Tài khoản đã bị xóa]';
+										}else{
+											echo $userInfo['username'];
+										}
+										?></span></p>
 				    				<div class="item-wrapper">
 										<div class="item" style="padding-left: 20px;"></div>
 					    				<div class="item">

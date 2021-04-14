@@ -14,7 +14,7 @@
     <div class="alertWrapper" id="alertWrapper">
     </div>
     <div class='wrapper'>
-        <h1> Page List </h1>
+        <h1> Comment List </h1>
         <table>
         <thead>
             <tr>

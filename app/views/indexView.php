@@ -104,7 +104,7 @@
 									<!-- Title -->
 									<div class="title">
 										<a href="<?php echo BASE_URL;?>/page.php?id=<?php echo $popularPage['id'];?>">
-											<h2 style="font-family: 'Lora-SemiBold';"><?php 
+											<h2 style="font-family: 'Lora-SemiBold'; font-size:18px"><?php 
 												if (strlen($popularPage['title'])>60 ){
 													echo(substr($popularPage['title'], 0, strpos($popularPage['title'].' ', ' ', 60)) . '...');
 												}else{
@@ -116,7 +116,7 @@
 									<!-- /.Title -->
 									<!-- Description -->
 									<div class="desc">
-										<p style="font-size: 0.8em"><?php echo $popularPage['label']; ?></p>
+										<p style="font-size: 16px"><?php echo $popularPage['label']; ?></p>
 									</div>
 									<!-- /.Description -->
 								</div>
