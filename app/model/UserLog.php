@@ -1,5 +1,5 @@
 <?php
-class UserInfo{
+class UserLog{
 
 
 

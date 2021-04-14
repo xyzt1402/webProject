@@ -54,8 +54,8 @@ if (!empty($_POST)) {
                 title = :title,
                 body  = :body,
                 userId = :userId,
-                topic = :topic
-        WHERE id = :id
+                topic = :topic,
+            WHERE id = :id
         ");
 
     $insertPage->execute([
