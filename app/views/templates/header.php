@@ -66,9 +66,9 @@
 								<p><?php echo $_SESSION['username'];?> <i class="fa fa-chevron-down"></i></p>
 								<div class="user-menu">
 									<ul>
-										<li><a href="<?php echo BASE_URL.'/user.php'?>">Quản lý thông tin</a></li>
-										<li><a href="<?php echo BASE_URL.'/create.php';?>">Thêm bài viết</a></li>
-										<li><a href="<?php echo BASE_URL;?>/app/model/logout.php" onclick="googleSignOut()">Đăng Xuất</a></li>
+										<li onclick="window.location.href='<?php echo BASE_URL;?>/user.php'"><a>Quản lý thông tin</a></li>
+										<li onclick="window.location.href='<?php echo BASE_URL;?>/create.php'"><a>Thêm bài viết</a></li>
+										<li onclick="out()"><a>Đăng Xuất</a></li>
 									</ul>
 								</div>
 							<?php else: ?>
@@ -149,3 +149,9 @@
     	</nav>
     </header>
 		<!-- /.Section Navbar V1 -->
+	<script>
+		function out(){
+			window.location.href='<?php echo BASE_URL;?>/app/model/logout.php'
+			googleSignOut();
+		}
+	</script>

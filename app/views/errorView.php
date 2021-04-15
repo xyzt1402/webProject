@@ -47,10 +47,10 @@
                             </h1>
 	    				</div>
 	    				<div class="content-image">
-	    					<img style="height: 250px;" class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/coffe-404.png" alt="Zola">
+	    					<img style="height: 250px;" class="img-fluid" src="https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif" alt="Zola">
 	    				</div>
 	    				<div class="cta-btn">
-	    					<a href="#">Quay lại</a>
+	    					<a href="javascript:window.history.back();">Quay lại</a>
 	    				</div>
 	    			</div>
     			</div>

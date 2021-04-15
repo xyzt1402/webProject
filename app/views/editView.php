@@ -34,7 +34,7 @@
                     <!-- Contact Form -->
                     <div class="contact-form">
                         <!-- Form -->
-                        <form action="<?php echo BASE_URL; ?>/app/model/createPage.php" method="POST" enctype="multipart/form-data">
+                        <form action="<?php echo BASE_URL; ?>/app/model/updatePage.php" method="POST" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="form-group col-sm-12 col-md-12 col-lg-6">
                                     <input type="text" class="form-control" name="title" placeholder="Tựa đề" value="<?php echo $updatePage['title'] ?>" required="" oninvalid="this.setCustomValidity('Thêm tựa đề')" oninput="setCustomValidity('')">
@@ -90,7 +90,7 @@
 									</div>
 								</div>
 								<br>
-                                <input name=" id" type="hidden" value=<?php echo $updatePage['id'] ?>>
+                                <input name="id" type="hidden" value=<?php echo $updatePage['id'] ?>>
                                 </input>
 								<div class="row">
 									<div class="form-group col-md-12">

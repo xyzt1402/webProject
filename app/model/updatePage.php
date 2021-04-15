@@ -46,26 +46,26 @@ if (!empty($_POST)) {
     }
     $userId = $_SESSION['id'];
 
-    $insertPage = $db->prepare("
-            UPDATE INTO pages ( label, url, title, body, userId, topic)
+    $updatePage = $db->prepare("
+            UPDATE pages
             SET
                 label = :label,
                 url = :url,
                 title = :title,
                 body  = :body,
                 userId = :userId,
-                topic = :topic,
+                topic = :topic
             WHERE id = :id
         ");
 
-    $insertPage->execute([
-        'id' =>$id,
+    $updatePage->execute([
         'label' => $label,
         'url' => $url,
         'title' => $title,
         'body' => $body,
         'userId' => $userId,
-        'topic' => $topic
+        'topic' => $topic,
+        'id' =>$id
     ]);
     header('Location: ' . BASE_URL);
 }
