@@ -32,7 +32,7 @@
     			<div class="col-12">
     				<div class="block-style-30">
 	    				<div class="logo" style="margin-bottom: 80px !important">
-	    					<a href="index.html"><img style="width: 160px" src="<?php echo BASE_VIEW;?>/assets/images/error_logo.png" class="Zola"></a>
+	    					<a href="index.html"><img style="width: 200px" src="<?php echo BASE_VIEW;?>/assets/images/error_logo.png" class="Zola"></a>
 	    				</div>
 	    				<div class="header">
 	    					<h6>LỖI</h6>
@@ -47,7 +47,7 @@
                             </h1>
 	    				</div>
 	    				<div class="content-image">
-	    					<img style="height: 250px;" class="img-fluid" src="https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif" alt="Zola">
+	    					<img style="height: 250px; border-radius: 5px" class="img-fluid" src="https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif" alt="Zola">
 	    				</div>
 	    				<div class="cta-btn">
 	    					<a href="javascript:window.history.back();">Quay lại</a>

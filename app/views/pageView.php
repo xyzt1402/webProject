@@ -137,15 +137,16 @@
 									</form>
 								</div>
 							</div>
-							<?php foreach($comments as $comment):?>
-								<div class="item">
+							<div class="comments" id="commentShow">
+							<!-- Comment Item -->
+								<?php foreach($comments as $comment):?>
 									<?php 
 										$id = $comment['userId'];
 										require MODEL_ROOT . '/getUserComment.php';
 									?>
-									<a href="#">
-										<div class="tweet-img">
-											<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+									<div class="media">
+										<div class="img-frame1">
+											<img class="mr-3"<?php 
 												if (!empty($userInfo['gId'])) {
 													echo "src='".$userInfo['gId']."'";
 												}else{
@@ -154,13 +155,56 @@
 												?>
 											>
 										</div>
-										<div class="tweet-content">
-											<h5><?php echo $userInfo['username'];?> <span><?php echo $comment['created'];?></span></h5>
+										<div class="media-body">
+											<div class="pin">
+												<!-- svg -->
+											</div>
+											<h5 class="mt-0"><?php echo $userInfo['username'];?><span><?php echo $comment['created'];?></span></h5>
 											<p><?php echo $comment['message'];?></p>
+											<!-- /.options -->
+											<div class="answers show">
+												<div class="see-answer" style="margin-bottom: 10px;">
+													<div class="show-answer" style="cursor: pointer" onclick="showSubCmt(this)">See 138 answers <i class="fa fa-chevron-down"></i></div>
+												</div>
+												<div class="replied" style="display: none;">
+													<?php 
+														$cmtId = $comment['id'];
+														require MODEL_ROOT . '/getSubComment.php';
+														
+													?>
+													<?php foreach($subComments as $subComment):?>
+														<?php 
+															$id = $subComment['userId'];
+															require MODEL_ROOT . '/getUserComment.php';
+														?>
+														<!-- Replied -->
+														<div class="media mt-3">
+															<a href="#">
+																<div class="img-frame2">
+																	<img class="mr-3"<?php 
+																		if (!empty($userInfo['gId'])) {
+																			echo "src='".$userInfo['gId']."'";
+																		}else{
+																			echo "avatar='".$userInfo['username']."'";
+																		}
+																		?>
+																	>
+																</div>
+															</a>
+															<div class="media-body">
+																<h5 class="mt-0"><?php echo $userInfo['username'];?> <span><?php echo $subComment['created'];?></span></h5>
+																<p><?php echo $subComment['message'];?></p>
+															</div>
+														</div>
+														<!-- /.Replied -->
+													<?php endforeach;?>
+												</div>
+											</div>
+											
 										</div>
-									</a>
-								</div>
-							<?php endforeach ?>
+									</div>
+								<?php endforeach ?>
+							</div>
 			         	</div>
 					</div>
 					<div class="ts-space50"></div>
@@ -177,6 +221,12 @@
     <!-- /.Section Contents -->
 
 <script>
+	function showSubCmt(ele){
+		see_answer = ele.parentElement;
+		see_answer.childNodes[1].style.display = "none";
+		see_answer.parentElement.childNodes[3].style.display="";
+		
+	}
 	function pressed(e){
 		var a = "<?php 
 			if (isset($_SESSION['username'])){
@@ -201,14 +251,14 @@
 							message: document.getElementById('message').value
 						},
 						success: function(msg) {
-							var commentPost = document.getElementById('commentPost');
-							
+							var commentPost = document.getElementById('commentShow');
+							var current = new Date();
+							var time  = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+current.getDate()+' '+current.getHours()+':'+current.getMinutes()+':'+current.getSeconds();
 							var item = document.createElement('div');
-							item.setAttribute('class','item');						
+							item.setAttribute('class','media');	
 							item.innerHTML = `
-							<a href="#">
-								<div class="tweet-img">
-								<img style="width: auto; height: 40px; border-radius: 100%" <?php 
+								<div class="img-frame1">
+									<img class="mr-3" <?php 
 										if (!empty($_SESSION['gId'])) {
 											echo "src='".$_SESSION['gId']."'";
 										}else{
@@ -216,12 +266,23 @@
 										}
 										?>>
 								</div>
-								<div class="tweet-content">
-								<h5><?php echo $_SESSION['username'];?><span>2021-04-10 20:35:49</span></h5>
-								<p>${document.getElementById('message').value}</p>
+								<div class="media-body">
+									<div class="pin">
+										<!-- svg -->
+									</div>
+									<h5 class="mt-0"><?php echo $_SESSION['username'];?><span>${time}</span></h5>
+									<p>${document.getElementById('message').value}</p>
+									<!-- /.options -->
+									<div class="answers show">
+										<div class="see-answer">
+											<div class="show-answer">See 138 answers <i class="fa fa-chevron-down"></i></div>
+											<div class="hide-answer">Hide answers <i class="fa fa-chevron-up"></i></div>
+										</div>
+										<div class="replied">
+																																				</div>
+									</div>				
 								</div>
-							</a>
-									`
+							`					
 							commentPost.insertBefore(item,commentPost.childNodes[2]);
 							document.getElementById('message').value = "";
 							LetterAvatar.transform();
