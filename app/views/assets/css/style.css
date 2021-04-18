@@ -5160,10 +5160,10 @@ body.comment-overlay:after {
     font-size: 16px;
     border: 1.5px solid #cfcfcf !important;
     background: transparent;
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 20px 20px;
     letter-spacing: 0;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 .add-comment .form-comment button{
 	font-family: 'Lora-Regular';
@@ -5194,6 +5194,9 @@ body.comment-overlay:after {
 .comments .media{
 	border-bottom: 1px solid #eeeeee;
 	margin-bottom: 25px;
+}
+.comment .media:last-of-type{
+	border-bottom: none !important;
 }
 .comments .media img{
 	display: inline-block;
@@ -5248,21 +5251,20 @@ body.comment-overlay:after {
 	transition: all 0.2s ease-in-out;
 }
 .comments .media-body p{
-	margin-bottom: 23px;
+	margin-bottom: 10px;
 }
 .comments .media-body p a{
 	color: #f96d00;
 }
 .comments .media-body .media{
 	border-bottom: 1px solid #eeeeee;
-    padding-top: 27px !important;
-    padding-bottom: 27px;
 }
 .comments .media-body .media:last-of-type{
+	margin-bottom: 0px !important;
 	border-bottom: none;
 }
 .comments .media-body .media:first-of-type{
-	border-top: 1px solid #eeeeee;
+	/* border-top: 1px solid #eeeeee; */
 }
 .comments .media-body .media-body h5{
 	margin-bottom: 12px;
@@ -5379,6 +5381,7 @@ body.comment-overlay:after {
 .block-style-31 .content-wrapper .answers.hide .hide-answer,
 .block-style-31 .content-wrapper .answers.show .show-answer{
 	display: none;
+	text-decoration: underline;
 }
 .block-style-31 .content-wrapper .answers.show .show-answer{
 	display: none;

@@ -159,28 +159,38 @@
 											<div class="pin">
 												<!-- svg -->
 											</div>
-											<h5 class="mt-0"><?php echo $userInfo['username'];?><span><?php echo $comment['created'];?></span></h5>
+											<h5 class="mt-0">
+												<?php echo $userInfo['username'];?>
+												<span><?php echo $comment['created'];?></span>
+											</h5>
 											<p><?php echo $comment['message'];?></p>
 											<!-- /.options -->
 											<div class="answers show">
-												<div class="see-answer" style="margin-bottom: 10px;">
-													<div class="show-answer" style="cursor: pointer" onclick="showSubCmt(this)">See 138 answers <i class="fa fa-chevron-down"></i></div>
-												</div>
+												<?php 
+													$cmtId = $comment['id'];
+													require MODEL_ROOT . '/getSubComment.php';
+												?>
+												<?php if (count($subComments)>0):?>
+													<div class="see-answer" style="margin-bottom: 10px;">
+														<div class="show-answer" style="cursor: pointer;font-family: 'Lora-Regular'" onclick="showSubCmt(this)">Xem <?php echo count($subComments);?> phản hồi <i class="fa fa-chevron-down"></i></div>
+													</div>
+												<?php else:?>
+													<div class="see-answer" style="margin-bottom: 10px;">
+														<div class="show-answer" style="cursor: pointer; font-family: 'Lora-Regular'" onclick="showSubCmt(this)">Trả lời
+														<span style="opacity: 0.7; padding-left:5px"><i class="fa fa-comment"></i></span>
+													</div>
+												</div>													
+												<?php endif;?>
 												<div class="replied" style="display: none;">
-													<?php 
-														$cmtId = $comment['id'];
-														require MODEL_ROOT . '/getSubComment.php';
-														
-													?>
 													<?php foreach($subComments as $subComment):?>
 														<?php 
 															$id = $subComment['userId'];
 															require MODEL_ROOT . '/getUserComment.php';
 														?>
 														<!-- Replied -->
-														<div class="media mt-3">
+														<div class="media" style="margin-bottom: 7px !important; border-bottom: 0px !important">
 															<a href="#">
-																<div class="img-frame2">
+																<div class="img-frame2" style="padding-top: 7px;">
 																	<img class="mr-3"<?php 
 																		if (!empty($userInfo['gId'])) {
 																			echo "src='".$userInfo['gId']."'";
@@ -192,12 +202,26 @@
 																</div>
 															</a>
 															<div class="media-body">
-																<h5 class="mt-0"><?php echo $userInfo['username'];?> <span><?php echo $subComment['created'];?></span></h5>
-																<p><?php echo $subComment['message'];?></p>
+																<h5 class="mt-0" style="margin: 2px !important;"><?php echo $userInfo['username'];?> <span><?php echo $subComment['created'];?></span></h5>
+																<p style="margin: 0px !important;"><?php echo $subComment['message'];?></p>
 															</div>
 														</div>
 														<!-- /.Replied -->
 													<?php endforeach;?>
+												</div>
+												<div class="add-comment" style="display: none;">
+													<div class="form-comment">
+														<form method="POST" id="commentForm" action="<?php echo BASE_URL;?>/app/model/addComment.php" onsubmit="alert('run')">
+															<div class="row">
+																<div class="form-group col-12">
+																	<input type="hidden" name="userId" value="<?php echo $_SESSION['id'];?>">
+																	<input type="hidden" name="pageId" value="<?php echo $page['id'];?>">
+																	<textarea style="padding: 8px 12px; height: 45px; border-radius: 20px"
+																		onkeydown="subPressed(event)" class="form-control" name="message" commentId="<?php echo $comment['id'];?>" placeholder="Viết câu trả lời ..." required=""></textarea>
+																</div>
+															</div>
+														</form>
+													</div>
 												</div>
 											</div>
 											
@@ -225,7 +249,65 @@
 		see_answer = ele.parentElement;
 		see_answer.childNodes[1].style.display = "none";
 		see_answer.parentElement.childNodes[3].style.display="";
-		
+		see_answer.parentElement.childNodes[5].style.display="";
+	}
+	function subPressed(e){
+		var a = "<?php 
+			if (isset($_SESSION['username'])){
+				echo $_SESSION['username'];
+			}else{
+				echo 'null';
+			}
+			?>"
+		if (e.key=="Enter"){
+			if (a!='null'){
+				console.log(e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[3])
+				if (e.target.value==""){
+					alert('bình luận không được rỗng');
+				}else{
+					$.ajax({
+						url: '<?php echo BASE_URL;?>/app/model/addSubComment.php',
+						type: 'POST',
+						data: {
+							userId: '<?php echo $_SESSION['id'];?>',
+							commentId: e.target.getAttribute('commentId'),
+							message: e.target.value
+						},
+						success: function(msg) {
+							var commentPost = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.childNodes[3];
+							var current = new Date();
+							var time  = current.getFullYear()+'-'+(current.getMonth()+1)+'-'+current.getDate()+' '+current.getHours()+':'+current.getMinutes()+':'+current.getSeconds();
+							var item = document.createElement('div');
+							item.setAttribute('class','media');	
+							item.setAttribute("style","margin-bottom: 7px !important; border-bottom: 0px !important");
+							item.innerHTML = `
+								<a href="#">
+									<div class="img-frame2" style="padding-top: 7px;">
+										<img class="mr-3" <?php 
+										if (!empty($_SESSION['gId'])) {
+											echo "src='".$_SESSION['gId']."'";
+										}else{
+											echo "avatar='".$_SESSION['username']."'";
+										}
+										?>>
+									</div>
+								</a>
+								<div class="media-body">
+									<h5 class="mt-0" style="margin: 2px !important;"><?php echo $_SESSION['username'];?> <span>${time}</span></h5>
+									<p style="margin: 0px !important;">${e.target.value}</p>
+								</div>
+							`					
+							commentPost.appendChild(item);
+							e.target.value = "";
+							LetterAvatar.transform();							
+						}
+
+					});
+				}
+			}else{
+				window.location.href = "login.php";
+			}
+		}
 	}
 	function pressed(e){
 		var a = "<?php 
@@ -272,14 +354,12 @@
 									</div>
 									<h5 class="mt-0"><?php echo $_SESSION['username'];?><span>${time}</span></h5>
 									<p>${document.getElementById('message').value}</p>
-									<!-- /.options -->
 									<div class="answers show">
-										<div class="see-answer">
-											<div class="show-answer">See 138 answers <i class="fa fa-chevron-down"></i></div>
-											<div class="hide-answer">Hide answers <i class="fa fa-chevron-up"></i></div>
-										</div>
-										<div class="replied">
-																																				</div>
+									<div class="see-answer" style="margin-bottom: 10px;">
+														<div class="show-answer" style="cursor: pointer; font-family: 'Lora-Regular';" onclick="showSubCmt(this)">Trả lời
+														<span style="opacity: 0.7; padding-left:5px"><i class="fa fa-comment"></i></span>
+													</div>
+									</div>
 									</div>				
 								</div>
 							`					
