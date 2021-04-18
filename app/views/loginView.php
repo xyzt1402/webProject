@@ -54,7 +54,7 @@
 											<a class="form-control btn" onclick="googleSignIn()" style="padding-bottom: 2em;padding-top: 0.8em; font-family: 'Lora-Regular';border: 1px solid #ced4da;">Tiếp tục với <b>Google</b> </a>
 										</div>
 										<ul>
-											<li><a class="forgot" href="#">Quên mật khẩu</a></li>
+											<li><a class="forgot" href="javascript:alert('Liên hệ admin')">Quên mật khẩu</a></li>
 											<li><a class="register" href="<?php echo BASE_URL;?>/signup.php">Tạo tài khoản mới</a></li>
 										</ul>
 									</div>
