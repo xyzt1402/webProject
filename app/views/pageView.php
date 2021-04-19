@@ -233,9 +233,6 @@
 					</div>
 					<div class="ts-space50"></div>
     				<div class="block-style-4">
-    					<a href="#">
-    						<img class="img-fluid" src="<?php echo BASE_VIEW;?>/assets/images/ads_01.jpg" alt="Zola">
-    					</a>
     				</div>
     			</div>
     			<!-- /.Block Style 3, 4, 5 -->
@@ -373,6 +370,12 @@
 			}else{
 				window.location.href = "login.php";
 			}
+		}
+	}
+	img = document.images
+	for (item of img){ 
+		if (item.complete==false || item.naturalHeight == 0){
+			item.src = "https://www.w3schools.com/howto/img_forest.jpg"
 		}
 	}
 </script>	
