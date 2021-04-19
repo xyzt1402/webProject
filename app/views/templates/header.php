@@ -17,7 +17,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="<?php echo BASE_VIEW;?>/assets/css/style.css" type="text/css">
 </head>
-<body>
+<body class="light-theme">
     <!-- Section Navbar V1 -->
     <header class="header-01">
     	<div class="topbar-01">
@@ -47,6 +47,15 @@
 		    			</div>
 		    		</div>
 		    		<div class="right col-6">
+						<div class="notification" style="top: -9px">
+							<label class="switch">
+								<i class="fa fa-adjust fa-lg"></i>
+								<div>
+								<input type="checkbox" id="themeSwitch"/>
+								<span class="slider round"></span>
+								</div>
+							</label>
+						</div>
 		    			<div class="notification" style="visibility:hidden">
 		    				<img src="<?php echo BASE_VIEW;?>/assets/images/svg/161-alarm.svg" alt="Zola">
 		    				<span>11</span>

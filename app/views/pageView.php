@@ -372,11 +372,5 @@
 			}
 		}
 	}
-	img = document.images
-	for (item of img){ 
-		if (item.complete==false || item.naturalHeight == 0){
-			item.src = "https://www.w3schools.com/howto/img_forest.jpg"
-		}
-	}
 </script>	
 <?php require('templates/footer.php');?>

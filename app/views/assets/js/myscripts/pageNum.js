@@ -42,4 +42,5 @@ function loadMore() {
             });
         }, 250);
     }
+    checkImg()
 }

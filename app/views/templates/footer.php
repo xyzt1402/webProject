@@ -87,5 +87,8 @@
 	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/quicksearch.js"></script>
 	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/pageNum.js"></script>
 	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/letteravar.js"></script>
+	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/checkImage.js"></script>
+	<script src="<?php echo BASE_VIEW;?>/assets/js/myscripts/darkMode.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 </body>
 </html>
