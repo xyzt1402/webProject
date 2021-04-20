@@ -87,7 +87,7 @@
                                 <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram fa-lg"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble fa-lg"></i></a></li>
+                                <li><a href="https://github.com/xyzt1402/webProject"><i class="fa fa-github fa-lg"></i></a></li>
                             </ul>
                         </div>
                     </div>

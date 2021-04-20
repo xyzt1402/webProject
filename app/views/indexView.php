@@ -47,7 +47,7 @@
 					<!-- /.Item -->
 					<!-- Item -->
 					<div class="thumbnail-1 v3">
-					<a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $pages[1]['id']; ?>">
+						<a href="<?php echo BASE_URL; ?>/page.php?id=<?php echo $pages[1]['id']; ?>">
 							<img src="<?php echo $pages[1]['url'] ?>">
 							<div class="overlay">
 								<div class="overlay-content">
@@ -172,17 +172,10 @@
 			</div>
 			<div class="col-12 col-lg-4">
 				<div class="row">
-					<script>
-						(function(u, c) {
-							document.write('<span id="' + u + '"></span>');
-							r = false;
-							s = document.createElement('script');
-							s.async = 1;
-							s.src = '//' + u + '/js/outbox.js?' + c;
-							t = document.getElementsByTagName('script')[0];
-							t.parentNode.insertBefore(s, t);
-						})('www.cryptoratesxe.com', 'width=336px&height=600px&cryptos=bitcoin,ethereum,xrp,bitcoin-cash,eos');
-					</script>
+					<div style="height:100%; width:100% ; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin-left: 30px;margin-right:15px;">
+						<div style="height:100%; padding:0px; margin:0px; width: 100%;overflow:hidden;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=light&cnt=5&pref_coin_id=3349&graph=yes" width="100%" height="409px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;overflow:hidden;"></iframe></div>
+						<div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div>
+					</div>
 				</div>
 			</div>
 		</div>
