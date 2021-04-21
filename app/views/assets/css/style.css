@@ -119,6 +119,25 @@ input:checked + .slider {
   --searchBar-background: #525355 ;
   --background-dropdown: #393e46;
 }
+.ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+  background-color: var(--background-color);
+}
+.ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar, .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners{
+  background-color: var(--behindColor);
+}
+.ck.ck-reset_all, .ck.ck-reset_all *{
+  color: var(--default-text-color) !important;
+}
+.ck.ck-editor__main>.ck-editor__editable{
+  background-color: var(--background-color) !important;
+}
+.form-control{
+  background: 0 0;
+}
+option{
+  background-color: var(--hoverColor);
+  color: var(--default-text-color);
+}
 body,
 html {
   font-family: Roboto-Regular;

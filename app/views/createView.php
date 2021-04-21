@@ -119,7 +119,6 @@
             .catch( error => {
                 console.error( error );
             } );
-
 		document.getElementById("inputGroupFile02").onchange = function(e){
 			e.target.parentNode.childNodes[3].textContent = e.target.value.split(/(\\|\/)/g).pop();
 		}
