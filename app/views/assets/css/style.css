@@ -4329,7 +4329,7 @@ body.comment-overlay:after {
   transition: all 0.2s ease-in-out;
 }
 #section-footer .ft-column .recentnews-02 .item:hover .content p {
-  color: var(--background-color);
+  color: #d7dadc;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
