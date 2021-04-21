@@ -7,7 +7,7 @@ if (!empty($_POST)) {
     $body = $_POST['body'];
     $topic = $_POST['topic'];
 
-    if (isset($_FILES)) {
+    if ($_FILES["fileToUpload"]["name"]!=="") {
         $target_dir = "../upload/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOK = 1;
@@ -18,38 +18,41 @@ if (!empty($_POST)) {
             echo "File is an image - " . $check["mime"] . ".";
             $uploadOk = 1;
         } else {
-            $error =  "File is not an image.";
+            $error =  "Ảnh bìa không xác định";
             header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             $uploadOk = 0;
         }
 
         if (file_exists($target_file)) {
-            $error = "Sorry, file already exists.";
+            $error = "File ảnh bìa đã tồn tại";
             header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             $uploadOk = 0;
         }
 
         if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-            $error = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+            $error = "Ảnh bìa chỉ chấp nhận các dạng: JPG, JPEG, PNG & GIF";
             header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             $uploadOk = 0;
         }
 
         if ($uploadOk == 0) {
-            $error = "Sorry, your file was not uploaded.";
+            if ($error==""){
+                $error = "Không thể upload file";
+            }
             header('Location: ' . BASE_URL . '/error.php?error=' . $error);
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
             } else {
-                $error = "Sorry, there was an error uploading your file.";
+                $error = "Lỗi trong quá trình upload ảnh bìa";
                 header('Location: ' . BASE_URL . '/error.php?error=' . $error);
             }
         }
     }
 
-    if (!isset($_POST['url'])) {
+    if ($url=="") {
         $url = BASE_URL . "/app/upload/" . basename($_FILES["fileToUpload"]["name"]);
+        var_dump($url);
     }
     $userId = $_SESSION['id'];
 

@@ -17,11 +17,11 @@
 		         	<h3>Team sáng lập</h3>
 		         	<div class="instagram-01">
 		         		<ul>
-		         			<li><a href="https://www.facebook.com/thanh.luc.030620"><img class="img-fluid" style="width: 115px; height: 115px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/luc.jpg"></a></li>
-		         			<li><a href="https://www.facebook.com/kingomegarobocon"><img class="img-fluid" style="width: 115px; height: 115px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/khiem.jpg"></a></li>
-		         			<li><a href="https://www.facebook.com/kimson.quach"><img class="img-fluid" style="width: 115px; height: 115px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/son.jpg"></a></li>
-		         			<li><a href="https://www.facebook.com/airbenderlongding"><img class="img-fluid" style="width: 115px; height: 115px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/trong.jpg"></a></li>
-		         			<li><a href="https://www.facebook.com/vietlethanh1402"><img class="img-fluid" style="width: 115px; height: 115px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/viet.jpg"></a></li>
+		         			<li><a href="https://www.facebook.com/thanh.luc.030620"><img class="img-fluid" style="width: 100px; height: 100px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/luc.jpg"></a></li>
+		         			<li><a href="https://www.facebook.com/kingomegarobocon"><img class="img-fluid" style="width: 100px; height: 100px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/khiem.jpg"></a></li>
+		         			<li><a href="https://www.facebook.com/kimson.quach"><img class="img-fluid" style="width: 100px; height: 100px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/son.jpg"></a></li>
+		         			<li><a href="https://www.facebook.com/airbenderlongding"><img class="img-fluid" style="width: 100px; height: 100px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/trong.jpg"></a></li>
+		         			<li><a href="https://www.facebook.com/vietlethanh1402"><img class="img-fluid" style="width: 100px; height: 100px; border-radius: 5px" src="<?php echo BASE_URL;?>/app/upload/viet.jpg"></a></li>
 		         		</ul>
 		         	</div>
 			   	</div>
