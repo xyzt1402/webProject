@@ -3634,7 +3634,7 @@ nav .dropdown {
   border: 2px solid #d6d9dc !important;
   background: 0 0;
   border-radius: 3px;
-  padding: 28px 30px;
+  padding: 0px 15px;
   letter-spacing: 0;
 }
 .block-style-27 .contact-form input:focus,

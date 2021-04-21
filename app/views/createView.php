@@ -64,14 +64,21 @@
 									</div>
 								</div>
 								<div class="row">
-									<div class="form-group col-12">
-										<input style="padding: 0px; width: 100%" type="file" name="fileToUpload" id="fileToUpload" class="hidden">
-										<label for="fileToUpload">Select file</label>				
+									<div class="form-group col-9" style="display: none;">
+										<!-- <input style="padding: 0px; width: 100%" type="file" name="fileToUpload" id="fileToUpload" class="hidden">	 -->
+										<div class="custom-file">
+											<input type="file" class="custom-file-input" id="inputGroupFile02" name="fileToUpload" />
+											<label class="custom-file-label" for="inputGroupFile02" data-browse="Chọn">Thêm ảnh bìa</label>
+										</div>	
 									</div>
-								</div>
-								<div class="row">
-									<div class="form-group col-12">
+									<div class="form-group col-9">
 										<input type="text" class="form-control" name="url" placeholder="URL ảnh bìa" oninvalid="this.setCustomValidity('Thêm ảnh bìa')" oninput="setCustomValidity('')">
+									</div>
+									<div class="form-group col-3">
+										<div class="custom-control custom-switch d-flex p-2 float-right">
+											<input type="checkbox" class="custom-control-input" id="customSwitch">
+											<label class="custom-control-label" for="customSwitch">Upload ảnh</label>
+										</div>
 									</div>
 								</div>
 								<div class="row">
@@ -112,6 +119,18 @@
             .catch( error => {
                 console.error( error );
             } );
-    </script>
+
+		document.getElementById("inputGroupFile02").onchange = function(e){
+			e.target.parentNode.childNodes[3].textContent = e.target.value.split(/(\\|\/)/g).pop();
+		}
+
+		var	customSwitch = document.getElementById("customSwitch")
+		customSwitch.onchange=function(e){
+			var divNode = customSwitch.parentElement.parentElement.parentElement.childNodes;
+			var temp = divNode[3].style.display;
+			divNode[3].style.display = divNode[1].style.display;
+			divNode[1].style.display = temp;
+		}
+	</script>
 
 <?php require('templates/footer.php'); ?>
