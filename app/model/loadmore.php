@@ -2,7 +2,7 @@
 <?php
     define('APP_ROOT',__DIR__);
     define('MODEL_ROOT',APP_ROOT . '/model');
-    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','root','');
+    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','webprojectUser','user123');
 
     if (!empty($_POST)) {
         $offset = $_POST["offset"];

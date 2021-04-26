@@ -1,8 +1,11 @@
-###### admin: root, pass: toor (encryted with bcrypt)
+##### admin: root, pass: toor (encryted with bcrypt)
 
-###### permission:
+webprojectUser  - user123
+webprojectAdmin - admin123
 
--   stt          dang nhap,binh luan          viet, sua, xoa bai chinh minh                 sua bai nguoi khac 
+##### permission:
+
+-   stt          dang nhap,binh luan          them bai viet                 sua, xoa bai viet
 
 - ​    0 
 
@@ -10,9 +13,10 @@
 
 - ​    2             x                              x
 
-- ​    3             x                              x                                               x
+- ​    3             x                              x                               x
 
-- ​   
+
+
   
 
   

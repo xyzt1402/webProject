@@ -9,4 +9,4 @@
     define('BASE_URL','http://localhost:' . PORT . '/myweb/webProject/admin');
     define('BASE_VIEW',BASE_URL . '/views/');
 
-    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','root','');
+    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','webprojectAdmin','admin123');

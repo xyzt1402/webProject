@@ -10,7 +10,7 @@
     define('BASE_URL','http://localhost:' . PORT . '/myweb/webProject');
     define('BASE_VIEW',BASE_URL . '/app/views/');
 
-    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','root','');
+    $db=new PDO('mysql:host=localhost:3306; dbname=webproject; charset=utf8','webprojectUser','user123');
 ?>
 <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
 <script>
